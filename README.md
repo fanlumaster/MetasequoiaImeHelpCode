@@ -1,0 +1,4 @@
+# FanImeHelpCode
+
+Helpcodes for FanImeTsf.
+
