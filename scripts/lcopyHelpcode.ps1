@@ -1,0 +1,1 @@
+Copy-Item -Path ".\helpcode.txt" -Destination "$env:LOCALAPPDATA/MetasequoiaImeTsf"
