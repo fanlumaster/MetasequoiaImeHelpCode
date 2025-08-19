@@ -1,4 +1,3 @@
 # FanImeHelpCode
 
-Helpcodes for FanImeTsf.
-
+Helpcodes for [MetasequoiaImeTsf](https://github.com/fanlumaster/MetasequoiaImeTsf).
