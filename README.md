@@ -2,39 +2,21 @@
 
 Helpcodes for [MetasequoiaImeTsf](https://github.com/metasequoiaime/MetasequoiaImeTsf).
 
-For debug:
+所有辅助码文件统一放在 `helpcodes\` 目录下。当前 server 使用的方案和文件为：
 
+- `lantian`：`helpcode.txt`（蓝天小雨点）
+- `ziranma`：`zrm_helpcode_big_unique.txt`（自然码）
+- `shouyou2_0`：`shouyou2_0_helpcode.txt`（首右2.0）
+- `shouyouplus`：`shouyouplus_helpcode.txt`（首右plus）
+- `xiaohe`：`xiaohe_helpcode.txt`（小鹤）
 
-- helpcode.txt
-
-```powershell
-git clone https://github.com/metasequoiaime/MetasequoiaImeHelpCode.git
-Remove-Item "C:\Users\<username>\AppData\Local\metasequoiaime\helpcode.txt" -Force
-New-Item -ItemType SymbolicLink -Path "C:\Users\<username>\AppData\Local\metasequoiaime\helpcode.txt" -Target ".\MetasequoiaImeHelpCode\helpcode.txt"
-```
-
-- zrm_helpcode_big_unique.txt
+本地调试时，可以把整个目录链接到 server 的数据目录：
 
 ```powershell
-Remove-Item "C:\Users\<username>\AppData\Local\metasequoiaime\zrm_helpcode_big_unique.txt" -Force
-New-Item -ItemType SymbolicLink -Path "C:\Users\<username>\AppData\Local\metasequoiaime\zrm_helpcode_big_unique.txt" -Target ".\MetasequoiaImeHelpCode\zrm_helpcode_big_unique.txt"
+$target = Join-Path $env:LOCALAPPDATA 'metasequoiaime\helpcodes'
+if (Test-Path -LiteralPath $target) {
+    Remove-Item -LiteralPath $target -Recurse -Force
+}
+New-Item -ItemType SymbolicLink -Path $target `
+    -Target 'C:\Users\SonnyCalcr\EDisk\CppCodes\IMECodes\MetasequoiaImeHelpCode\helpcodes'
 ```
-
-e.g.
-
-```powershell
-git clone https://github.com/metasequoiaime/MetasequoiaImeHelpCode.git
-Remove-Item "C:\Users\SonnyCalcr\AppData\Local\metasequoiaime\helpcode.txt" -Force
-New-Item -ItemType SymbolicLink -Path "C:\Users\SonnyCalcr\AppData\Local\metasequoiaime\helpcode.txt" -Target "C:\Users\SonnyCalcr\EDisk\CppCodes\IMECodes\MetasequoiaImeHelpCode\helpcode.txt"
-```
-
-- zrm_helpcode_big_unique.txt
-
-e.g.
-
-```powershell
-Remove-Item "C:\Users\SonnyCalcr\AppData\Local\metasequoiaime\zrm_helpcode_big_unique" -Force
-New-Item -ItemType SymbolicLink -Path "C:\Users\SonnyCalcr\AppData\Local\metasequoiaime\zrm_helpcode_big_unique.txt" -Target "C:\Users\SonnyCalcr\EDisk\CppCodes\IMECodes\MetasequoiaImeHelpCode\zrm_helpcode_big_unique.txt"
-```
-
-Note: here we must use absolute path.

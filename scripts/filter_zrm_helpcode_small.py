@@ -7,9 +7,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_INPUT = ROOT / "zrm_helpcode_big.txt"
-DEFAULT_REFERENCE = ROOT / "helpcode.txt"
-DEFAULT_OUTPUT = ROOT / "zrm_helpcode.txt"
+DEFAULT_INPUT = ROOT / "helpcodes" / "zrm_helpcode_big.txt"
+DEFAULT_REFERENCE = ROOT / "helpcodes" / "helpcode.txt"
+DEFAULT_OUTPUT = ROOT / "helpcodes" / "zrm_helpcode.txt"
 
 
 def read_keys(path: Path) -> set[str]:

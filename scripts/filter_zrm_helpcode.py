@@ -9,7 +9,7 @@ from pathlib import Path
 DEFAULT_INPUT = Path(
     r"C:\Users\SonnyCalcr\Downloads\ZRM_Aux-code-main\ZRM_Aux-code_4.3.txt"
 )
-DEFAULT_OUTPUT = DEFAULT_INPUT.with_name("zrm_helpcode.txt")
+DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "helpcodes" / "zrm_helpcode.txt"
 
 
 def filter_helpcode(source: Path, destination: Path) -> tuple[int, int]:
