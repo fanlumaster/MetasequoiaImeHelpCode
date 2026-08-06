@@ -20,3 +20,7 @@ if (Test-Path -LiteralPath $target) {
 New-Item -ItemType SymbolicLink -Path $target `
     -Target 'C:\Users\SonnyCalcr\EDisk\CppCodes\IMECodes\MetasequoiaImeHelpCode\helpcodes'
 ```
+
+## 参考
+
+- 自然码辅助码：<https://github.com/copperay/ZRM_Aux-code>
